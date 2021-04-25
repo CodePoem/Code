@@ -16,9 +16,9 @@ abstract class BaseVbVmFragment<VB : ViewBinding, VM : BaseViewModel> : BaseVmFr
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        mBinding = viewBindingInflate()
+        mBinding = viewBindingInflate(container)
         return mBinding.root
     }
 
-    protected abstract fun viewBindingInflate(): VB
+    protected abstract fun viewBindingInflate(container: ViewGroup?): VB
 }

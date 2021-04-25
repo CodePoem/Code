@@ -6,6 +6,8 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
+    resourcePrefix "cda_"
+
     defaultConfig {
         applicationId "com.vdreamers.codepoem"
         minSdkVersion 21
@@ -30,6 +32,9 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    // self
+    implementation project(":base")
 
     // kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
